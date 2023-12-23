@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MelFormatters", "MelFormatt
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogSample", "LogSample\LogSample.csproj", "{21B07D84-C092-4D00-8B2C-94D7E08ED1E6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HttpSpy", "HttpSpy\HttpSpy.csproj", "{FC604D7C-22AD-43EB-90E2-544ABCFB5218}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HttpSpySample", "HttpSpySample\HttpSpySample.csproj", "{456F9A01-5CAF-4515-A851-992CFE513211}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +28,13 @@ Global
 		{21B07D84-C092-4D00-8B2C-94D7E08ED1E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{21B07D84-C092-4D00-8B2C-94D7E08ED1E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{21B07D84-C092-4D00-8B2C-94D7E08ED1E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC604D7C-22AD-43EB-90E2-544ABCFB5218}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC604D7C-22AD-43EB-90E2-544ABCFB5218}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC604D7C-22AD-43EB-90E2-544ABCFB5218}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC604D7C-22AD-43EB-90E2-544ABCFB5218}.Release|Any CPU.Build.0 = Release|Any CPU
+		{456F9A01-5CAF-4515-A851-992CFE513211}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{456F9A01-5CAF-4515-A851-992CFE513211}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{456F9A01-5CAF-4515-A851-992CFE513211}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{456F9A01-5CAF-4515-A851-992CFE513211}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
