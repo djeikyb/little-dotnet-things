@@ -5,6 +5,8 @@ using Microsoft.Extensions.Logging.Console;
 
 namespace MelFormatters;
 
+// was https://gist.github.com/djeikyb/eeb600e1ce3619059adec6c8ca304923
+
 public class HiCaMelFmattr : ConsoleFormatter
 {
     public HiCaMelFmattr() : base("customName")
