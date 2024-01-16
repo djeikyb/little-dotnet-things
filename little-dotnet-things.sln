@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HttpSpySample", "HttpSpySam
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PemReader", "PemReader\PemReader.csproj", "{31B0D750-94BC-455F-8F5B-10EEBE7097F0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XunitThings", "XunitThings\XunitThings.csproj", "{7845F7BD-089A-41C8-8A22-F0276F8AE3A4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -42,5 +44,9 @@ Global
 		{31B0D750-94BC-455F-8F5B-10EEBE7097F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{31B0D750-94BC-455F-8F5B-10EEBE7097F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{31B0D750-94BC-455F-8F5B-10EEBE7097F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7845F7BD-089A-41C8-8A22-F0276F8AE3A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7845F7BD-089A-41C8-8A22-F0276F8AE3A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7845F7BD-089A-41C8-8A22-F0276F8AE3A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7845F7BD-089A-41C8-8A22-F0276F8AE3A4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
