@@ -53,4 +53,26 @@ public static class AnsiTextWriterExtensions
         sb.Append('m');
         wr.Write(sb.ToString());
     }
+
+    /// <inheritdoc cref="Style(System.IO.TextWriter,System.Nullable{byte},System.Nullable{byte},byte)"/>
+    public static void Style(this TextWriter wr, params byte[] textFormatCodes)
+    {
+        if (textFormatCodes.Length == 0)
+        {
+            wr.Write("\x1b[0m");
+            return;
+        }
+
+        var sb = new StringBuilder();
+        sb.Append("\x1b[");
+        sb.Append(textFormatCodes[0]);
+        for (var index = 1; index < textFormatCodes.Length; index++)
+        {
+            var code = textFormatCodes[index];
+            sb.Append(';').Append(code);
+        }
+
+        sb.Append('m');
+        wr.Write(sb.ToString());
+    }
 }

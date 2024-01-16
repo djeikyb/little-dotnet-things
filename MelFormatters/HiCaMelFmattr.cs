@@ -51,7 +51,7 @@ public class HiCaMelFmattr : ConsoleFormatter
 
                         if (kv.Value is null)
                         {
-                            state.Style(fg: 93, text: 1);
+                            state.Style(93,1,5);
                             state.WriteLine("null");
                             state.Style();
                         }
