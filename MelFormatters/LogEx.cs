@@ -4,6 +4,7 @@ namespace MelFormatters;
 
 public static class LogEx
 {
+    /// <inheritdoc cref="ScopeStateBuilder{T}.With"/>
     public static ScopeStateBuilder<T> With<T>(this ILogger<T> logger, string k, object? v) => new(logger, k, v);
 
     public sealed class ScopeStateBuilder<T> : ILogger<T>
@@ -17,6 +18,21 @@ public static class LogEx
             _state[k] = v;
         }
 
+        /// <param name="k">
+        /// <para>
+        /// If using serilog, the value will be destructured (eg as
+        /// simple json) when the key starts with an @.
+        /// </para>
+        /// <code>
+        /// .With("@rate", rate); // {"rate": {"tier": "…", "qty": "…"}}
+        /// </code>
+        /// <para>
+        /// vs
+        /// </para>
+        /// <code>
+        /// _logger.With("rate_tier", rate.Tier).With("rate_qty", rate.Qty);
+        /// </code>
+        /// </param>
         public ScopeStateBuilder<T> With(string k, object? v)
         {
             _state[k] = v;
