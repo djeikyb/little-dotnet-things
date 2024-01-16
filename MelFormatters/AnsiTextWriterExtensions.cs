@@ -4,6 +4,15 @@ namespace MelFormatters;
 
 public static class AnsiTextWriterExtensions
 {
+    // https://vt100.net/docs/vt510-rm/SGR.html
+    // https://notes.burke.libbey.me/ansi-escape-codes/
+    // https://gist.github.com/fnky/458719343aabd01cfb17a3a4f7296797
+    // https://en.wikipedia.org/wiki/ANSI_escape_code
+    // https://www.lihaoyi.com/post/BuildyourownCommandLinewithANSIescapecodes.html#8-colors
+    // https://en.wikipedia.org/wiki/ANSI_escape_code#8-bit
+    // https://learn.microsoft.com/en-us/windows/console/console-virtual-terminal-sequences#cursor-positioning
+    // https://duffney.io/usingansiescapesequencespowershell/#basic-foreground--background-colors
+
     /// <summary>
     /// Calling with no args calls reset, equivalent to u001b[0m
     /// </summary>
