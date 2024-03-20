@@ -9,7 +9,7 @@ logger
 or
 
 ```csharp
-using var _ = mel
+using var _ = logger
     .With("correlation_id", "some value")
     .With("username", "some value")
     .With("ip_address", "some value")
