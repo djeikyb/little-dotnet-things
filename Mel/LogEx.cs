@@ -1,6 +1,6 @@
 using Microsoft.Extensions.Logging;
 
-namespace Merviche.Mel;
+namespace Merviche.Logging;
 
 public static class LogEx
 {

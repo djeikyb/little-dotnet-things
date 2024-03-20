@@ -1,7 +1,7 @@
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Logging.Console;
 
-namespace Merviche.Mel.Formatter;
+namespace Merviche.Logging.Formatter;
 
 public static class HiCaMelFmattrEx
 {
