@@ -1,6 +1,14 @@
 Try this:
 
 ```csharp
+logger
+    .With("just_one_key", "for just this one log event")
+    .LogInformation("pbbbtth");
+```
+
+or
+
+```csharp
 using var _ = mel
     .With("correlation_id", "some value")
     .With("username", "some value")
