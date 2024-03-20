@@ -1,6 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
-using Merviche.MelFormatters;
+using Merviche.Mel;
+using Merviche.Mel.Formatter;
 using Microsoft.Extensions.Logging;
 
 var lf = LoggerFactory

@@ -8,7 +8,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\HttpSpy\HttpSpy.csproj" />
-    <ProjectReference Include="..\MelFormatters\MelFormatters.csproj" />
+    <ProjectReference Include="..\Mel\Mel.csproj" />
   </ItemGroup>
 
 </Project>

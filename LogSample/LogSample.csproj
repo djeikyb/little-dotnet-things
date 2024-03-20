@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\MelFormatters\MelFormatters.csproj" />
+    <ProjectReference Include="..\Mel\Mel.csproj" />
   </ItemGroup>
 
 </Project>

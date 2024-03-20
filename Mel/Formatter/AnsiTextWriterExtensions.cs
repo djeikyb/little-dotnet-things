@@ -1,6 +1,6 @@
 using System.Text;
 
-namespace Merviche.MelFormatters;
+namespace Merviche.Mel.Formatter;
 
 public static class AnsiTextWriterExtensions
 {
