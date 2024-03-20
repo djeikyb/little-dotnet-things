@@ -1,7 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
-using HttpSpy;
-using MelFormatters;
+using Merviche.HttpSpy;
+using Merviche.MelFormatters;
 using Microsoft.Extensions.Logging;
 
 var lf = LoggerFactory

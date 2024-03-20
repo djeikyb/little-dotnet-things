@@ -2,6 +2,7 @@
 
   <PropertyGroup>
     <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>Merviche.MelFormatters</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>

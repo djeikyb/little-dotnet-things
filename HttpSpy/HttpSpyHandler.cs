@@ -5,7 +5,7 @@ using System.Net.Mime;
 using System.Text;
 using Microsoft.Extensions.Logging;
 
-namespace HttpSpy;
+namespace Merviche.HttpSpy;
 
 /// <summary>
 /// Output format is modeled after httpie verbose format, which in turn is

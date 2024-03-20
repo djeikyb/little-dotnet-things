@@ -3,7 +3,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Logging.Abstractions;
 using Microsoft.Extensions.Logging.Console;
 
-namespace MelFormatters;
+namespace Merviche.MelFormatters;
 
 // was https://gist.github.com/djeikyb/eeb600e1ce3619059adec6c8ca304923
 
