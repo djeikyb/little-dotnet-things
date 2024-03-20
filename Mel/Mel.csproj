@@ -24,6 +24,7 @@
     <PackageLicenseExpression>0BSD</PackageLicenseExpression>
     <RepositoryUrl>https://github.com/djeikyb/little-dotnet-things.git</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
+    <PackageProjectUrl>https://github.com/djeikyb/little-dotnet-things</PackageProjectUrl>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <Copyright>Copyright (c) Jacob Certain 2024</Copyright>
 
