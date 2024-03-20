@@ -2,8 +2,8 @@ Try this:
 
 ```csharp
 logger
-    .With("just_one_key", "for just this one log event")
-    .LogInformation("pbbbtth");
+    .With("just_one_key", "🐙")
+    .LogInformation("🪼");
 ```
 
 or
