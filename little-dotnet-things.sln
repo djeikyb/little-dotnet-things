@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mel", "Mel\Mel.csproj", "{265FA3FA-FF65-4F45-B456-80B90835F271}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logging", "Logging\Logging.csproj", "{265FA3FA-FF65-4F45-B456-80B90835F271}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogSample", "LogSample\LogSample.csproj", "{21B07D84-C092-4D00-8B2C-94D7E08ED1E6}"
 EndProject
