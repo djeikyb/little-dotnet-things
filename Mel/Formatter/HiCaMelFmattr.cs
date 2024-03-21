@@ -9,7 +9,7 @@ namespace Merviche.Logging.Formatter;
 
 public class HiCaMelFmattr : ConsoleFormatter
 {
-    public HiCaMelFmattr() : base("customName")
+    public HiCaMelFmattr() : base(typeof(HiCaMelFmattr).FullName!)
     {
     }
 
