@@ -7,6 +7,13 @@ namespace Merviche.Logging.Formatter;
 
 // was https://gist.github.com/djeikyb/eeb600e1ce3619059adec6c8ca304923
 
+/// <para>
+/// A High Cardinality Microsoft.Extensions.Logging Formatter
+/// </para>
+/// <para>
+/// It uses colours, so make sure your output destination speaks ANSI terminal
+/// codes. Otherwise you're gonna have a bad time.
+/// </para>
 public class HiCaMelFmattr : ConsoleFormatter
 {
     public HiCaMelFmattr() : base(typeof(HiCaMelFmattr).FullName!)
