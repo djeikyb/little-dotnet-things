@@ -1,17 +1,21 @@
 Try this:
 
 ```csharp
-logger.With("just_one_key", "🐙")
+logger.With("just_one_key", "for one log event 🐙")
       .LogInformation("🪼");
 ```
 
 instead of:
 
 ```csharp
-var state = new Dictionary<string, object?>();
-state["just_one_key"] = "is a lot of work 🐛";
-using var _ = logger.BeginScope(state);
-logger.LogInformation("so much boilerplate");
+using (logger.BeginScope(new Dictionary<string, object?>
+{
+   { "for_just_one_log_event", "this is a lot of code 🐛" },
+    // another key could go on this line
+}))
+{
+    logger.LogInformation("so much boilerplate");
+}
 ```
 
 Or:
