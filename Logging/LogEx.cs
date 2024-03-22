@@ -1,3 +1,4 @@
+using System.Runtime.CompilerServices;
 using Microsoft.Extensions.Logging;
 
 namespace Merviche.Logging;
@@ -37,6 +38,20 @@ public static class LogEx
         {
             _state[k] = v;
             return this;
+        }
+
+        public ScopeStateBuilder<T> Value(
+            object? value,
+            [CallerArgumentExpression("value")] string? parameterName = null
+        )
+        {
+            if (parameterName!.Contains('.'))
+            {
+                var a = parameterName.Split('.');
+                parameterName = a[^1];
+            }
+
+            return With(parameterName, value); // bang is safe, compiler will pass empty string if misconfigured
         }
 
         public void Log<TState>(
