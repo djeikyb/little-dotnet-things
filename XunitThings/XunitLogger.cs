@@ -6,22 +6,16 @@ namespace Merviche.XunitThings;
 
 /// A simpler hack around xunit's determined hostility:
 /// https://gist.github.com/djeikyb/cf8f81e6917335b346534f5f072a1242
-public class XunitTextWriter : TextWriter
+public class XunitTextWriter(ITestOutputHelper output) : TextWriter
 {
-    private readonly ITestOutputHelper _output;
-    public XunitTextWriter(ITestOutputHelper output) => _output = output;
     public override Encoding Encoding { get; } = Encoding.UTF8;
-    public override void WriteLine(string? value) => _output.WriteLine(value);
+    public override void WriteLine(string? value) => output.WriteLine(value);
 }
 
 /// A barely functional logger to standard out for xunit.
 /// https://gist.github.com/djeikyb/cf8f81e6917335b346534f5f072a1242
-public class XunitLogger<T> : ILogger<T>
+public class XunitLogger<T>(ITestOutputHelper outputHelper) : ILogger<T>
 {
-    private readonly ITestOutputHelper _outputHelper;
-
-    public XunitLogger(ITestOutputHelper outputHelper) => _outputHelper = outputHelper;
-
     public IDisposable BeginScope<TState>(TState state) where TState : notnull => throw new NotImplementedException();
 
     public bool IsEnabled(LogLevel logLevel) => true;
@@ -33,7 +27,7 @@ public class XunitLogger<T> : ILogger<T>
         Exception? exception,
         Func<TState, Exception?, string> formatter
     ) =>
-        _outputHelper.WriteLine(
+        outputHelper.WriteLine(
             $"{logLevel.ToString()[..3]}] {formatter.Invoke(state, exception)}\n\n{exception}"
         );
 }
