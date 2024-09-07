@@ -10,4 +10,32 @@
     <PackageReference Include="xunit.extensibility.core" Version="2.2.0" />
   </ItemGroup>
 
+  <PropertyGroup>
+    <PackageId>$(RootNamespace)</PackageId>
+    <Version>1.0.0</Version>
+    <PackageTags>Xunit;Test;Logging;Microsoft.Extensions.Logging;</PackageTags>
+    <Description>
+      A few classes to bridge the gulf between an ITestOutputHelper and the code you're desperately trying to debug
+      with calls to Console.WriteLine().
+    </Description>
+    <Authors>Jacob Certain</Authors>
+    <PackageIcon>icon.png</PackageIcon>
+    <PackageLicenseExpression>0BSD</PackageLicenseExpression>
+    <RepositoryUrl>https://github.com/djeikyb/little-dotnet-things.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageProjectUrl>https://github.com/djeikyb/little-dotnet-things</PackageProjectUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <Copyright>Copyright (c) Jacob Certain 2024</Copyright>
+
+    <!-- feels discrete, it's packing instructions, not metadata. -->
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="../icon.png" Pack="true" Visible="false" PackagePath="" />
+    <None Include="README.md" Pack="true" PackagePath="/"/>
+  </ItemGroup>
+
 </Project>
