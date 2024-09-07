@@ -3,7 +3,8 @@ using Xunit.Abstractions;
 
 namespace Merviche.XunitThings;
 
-/// A simpler hack around xunit's determined hostility:
+/// Console.Out is a TextWriter.
+/// Why isn't ITestOutputHelper?
 /// https://gist.github.com/djeikyb/cf8f81e6917335b346534f5f072a1242
 public class XunitTextWriter(ITestOutputHelper output) : TextWriter
 {
