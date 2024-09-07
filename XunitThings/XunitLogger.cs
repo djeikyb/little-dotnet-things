@@ -7,7 +7,7 @@ namespace Merviche.XunitThings;
 /// https://gist.github.com/djeikyb/cf8f81e6917335b346534f5f072a1242
 public class XunitLogger<T>(ITestOutputHelper outputHelper) : ILogger<T>
 {
-    public IDisposable BeginScope<TState>(TState state) where TState : notnull => throw new NotImplementedException();
+    public IDisposable BeginScope<TState>(TState state) where TState : notnull => NoopDisposable.Instance;
 
     public bool IsEnabled(LogLevel logLevel) => true;
 
