@@ -6,14 +6,14 @@ namespace Merviche.Logging;
 public static class LogEx
 {
     /// <inheritdoc cref="ScopeStateBuilder{T}.With"/>
-    public static ScopeStateBuilder<T> With<T>(this ILogger<T> logger, string k, object? v) => new(logger, k, v);
+    public static ScopeStateBuilder With(this ILogger logger, string k, object? v) => new(logger, k, v);
 
-    public sealed class ScopeStateBuilder<T> : ILogger<T>
+    public sealed class ScopeStateBuilder : ILogger
     {
-        private readonly ILogger<T> _logger;
+        private readonly ILogger _logger;
         private readonly IDictionary<string, object?> _state = new Dictionary<string, object?>();
 
-        public ScopeStateBuilder(ILogger<T> logger, string k, object? v)
+        public ScopeStateBuilder(ILogger logger, string k, object? v)
         {
             _logger = logger;
             _state[k] = v;
@@ -34,7 +34,7 @@ public static class LogEx
         /// _logger.With("rate_tier", rate.Tier).With("rate_qty", rate.Qty);
         /// </code>
         /// </param>
-        public ScopeStateBuilder<T> With(string k, object? v)
+        public ScopeStateBuilder With(string k, object? v)
         {
             _state[k] = v;
             return this;
