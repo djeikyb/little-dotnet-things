@@ -40,7 +40,13 @@ public static class LogEx
             return this;
         }
 
-        public ScopeStateBuilder<T> Value(
+        public ScopeStateBuilder With(IDictionary<string, string> d)
+        {
+            foreach (var kv in d) With(kv.Key, kv.Value);
+            return this;
+        }
+
+        public ScopeStateBuilder Value(
             object? value,
             [CallerArgumentExpression("value")] string? parameterName = null
         )
@@ -69,7 +75,7 @@ public static class LogEx
         public bool IsEnabled(LogLevel logLevel) => _logger.IsEnabled(logLevel);
         public IDisposable? BeginScope() => _logger.BeginScope(_state);
 
-        /// Why would you use this? Use the fluent <see cref="With"/> and <see cref="BeginScope()"/> instead!
+        /// Why would you use this? Use the fluent <see cref="With(string,object?)"/> and <see cref="BeginScope()"/> instead!
         public IDisposable? BeginScope<TState>(TState state) where TState : notnull => _logger.BeginScope(state);
     }
 }
