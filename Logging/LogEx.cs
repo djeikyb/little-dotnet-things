@@ -5,7 +5,7 @@ namespace Merviche.Logging;
 
 public static class LogEx
 {
-    /// <inheritdoc cref="ScopeStateBuilder{T}.With"/>
+    /// <inheritdoc cref="ScopeStateBuilder.With(string,object?)"/>
     public static ScopeStateBuilder With(this ILogger logger, string k, object? v) => new(logger, k, v);
 
     public sealed class ScopeStateBuilder : ILogger
