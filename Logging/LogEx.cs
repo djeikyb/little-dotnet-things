@@ -8,6 +8,11 @@ public static class LogEx
     /// <inheritdoc cref="ScopeStateBuilder.With(string,object?)"/>
     public static ScopeStateBuilder With(this ILogger logger, string k, object? v) => new(logger, k, v);
 
+    /// Creates an empty scope. Next, call
+    /// <see cref="ScopeStateBuilder.With(string,object?)">logger.With("key", "value")</see>
+    /// to enrich your logs with useful information.
+    public static ScopeStateBuilder With(this ILogger logger) => new(logger);
+
     public sealed class ScopeStateBuilder : ILogger
     {
         private readonly ILogger _logger;
@@ -17,6 +22,11 @@ public static class LogEx
         {
             _logger = logger;
             _state[k] = v;
+        }
+
+        public ScopeStateBuilder(ILogger logger)
+        {
+            _logger = logger;
         }
 
         /// <param name="k">
